@@ -1,0 +1,72 @@
+<!-- omitted global container -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nav module</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="css/nav.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="fluid-container">
+    <!-- fluid layout module -->
+    <header class="nav-fixed">
+    <div class="nav-container">
+      <!-- nav container contains trusted partners div block and nav div block for logo nav elements -->
+      <!-- add a MQ for mobile to reverse the column -->
+      <div class="top-lvl-nav">
+        <!-- Add logo and Vav here -->
+        <div class="logo">
+          <figure>
+              <a href="#"><img src="/img/80x150-logo.png" width="150" height="80" alt="" /></a>
+          </figure>
+        </div>
+        <nav class="nav" role="navigation">
+          <ul class="menu">
+            <!-- .menu is a wordpress class -->
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Case studies</a>
+            </li>
+            <li>
+              <a href="#">News</a>
+            </li>
+            <li>
+              <a href="#">Get in touch</a>
+            </li>
+          </ul>
+          <a class="toggle-nav" href="#">&#9776;</a>
+        </nav>
+      </div>
+      <div class="trusted-partners">
+        <!-- add ul li with partner icons -->
+        <ul class="partners">
+          <li> <img src="/img/web-logos/Grabyo.png" width="24" alt="" /> </li>
+          <li> <img src="/img/web-logos/itv.png" width="24" alt="" /> </li>
+          <li> <img src="/img/web-logos/sky.png" width="24" alt="" /> </li>
+          <li> <img src="/img/web-logos/YOUTUBE.png" width="24" alt="" /> </li>
+        </ul>
+      </div>
+    </div>
+    </header>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('.toggle-nav').on('click', function() {
+        $('.menu').toggleClass('is-open');
+        
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
