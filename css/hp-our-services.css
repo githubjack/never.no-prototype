@@ -1,0 +1,148 @@
+*,*::before,*::after{
+	box-sizing:border-box;
+	margin:0;
+}
+body{
+	font: 300 16px/1.5 'Source Sans Pro', sans-serif;
+	background:white;
+}
+ul, li{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.fluid-container{
+	width:100vw;
+	height:auto;
+	overflow-x: hidden;
+}
+
+.content-container{
+    max-width:1440px;
+	height: auto;
+	overflow-x: hidden;
+	margin:0 auto;
+}
+.our-service{
+    width:80%;
+    margin:0 auto;
+}
+.service-intro{
+    display:inline-block;
+    padding:0 50% 0 1.5rem;
+}
+.service-intro h2{ font-weight:100; margin-bottom:30px;}
+.service-intro h2 span{
+    border-bottom:1px solid #000;
+}
+.service-list {
+    width:94%;
+}
+.service-list .service-items{
+    display:flex;
+    flex-direction: column;
+}
+.service-list .service-items li.service{
+    display:flex;
+    flex-basis: 100%;
+    position: relative;
+    padding: 2rem;
+    margin:3rem 0;
+}
+.service-list .service-items .forward{
+    display:flex;
+    flex-direction: row;
+    color:#000;
+}
+.service-list .service-items .reverse{
+    display:flex;
+    flex-direction:row-reverse;
+    color:#fff;
+}
+.service-list .service-items .service-odd{
+    background-color:#f69322;
+}
+.service-list .service-items .service-even{
+    background-color:#00a8ff;
+}
+
+.service-list .service-items li.forward .service-icon{
+    margin-right:2rem;
+}
+.service-list .service-items li.reverse .service-icon{
+    margin-left:2rem;
+}
+.service-list .service-items li.forward::before{
+    content:'';
+    position: absolute;
+    left:0;
+    bottom: -64px;
+    width:64px;
+    height: 64px;
+    background-image: url(../img/our-services/odd-chat.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.service-list .service-items li.reverse::before{
+    content:'';
+    position: absolute;
+    right:0;
+    bottom: -64px;
+    width:64px;
+    height: 64px;
+    background-image: url(../img/our-services/even-chat.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+
+.service-list .service-items li.service .service-info{
+   display:flex;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: flex-start;
+   font-size:1.5rem;
+}
+li.forward .service-info h3,
+li.reverse .service-info h3{ font-weight:100; margin-bottom:30px;}
+li.forward .service-info h3 span{
+    border-bottom:1px solid #000;
+}
+li.reverse .service-info h3 span{
+    border-bottom:1px solid #fff;
+}
+li.forward .service-info p a{
+    border-bottom:1px solid #000;
+    color:#000;
+}
+li.reverse .service-info p a{
+    border-bottom:1px solid #fff;
+    color:#fff;
+}
+li.service .service-info p{
+    margin-bottom:15px;
+}
+li.service .service-info p a{
+    display: block;
+    position: absolute;
+    bottom: 2.4rem;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 860px){
+    .service-list .service-items li.service{
+        display:block;
+    }
+    .service-list .service-items li.forward .service-icon{
+        margin-right:0;
+        width:100%;
+    }
+    .service-list .service-items li.reverse .service-icon{
+        margin-left:0;
+        width:100%;
+    }
+    .service-list .service-items li.forward .service-icon img{
+       /* width:100%;*/
+    }
+}

@@ -1,0 +1,119 @@
+*,*::before,*::after{
+	box-sizing:border-box;
+	margin:0;
+}
+body{
+	font: 300 16px/1.5 'Source Sans Pro', sans-serif;
+	background:black;
+}
+ul, li{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.fluid-container{
+	width:100vw;
+	height:auto;
+	overflow-x: hidden;
+}
+.hero{
+    width:100%;
+    height:680px;
+    background-color:#00212f
+}
+.hero .content-container{
+    max-width:1440px;
+	height: auto;
+	overflow-x: hidden;
+	margin:0 auto;
+}
+.hero .content-container .hero-banner{
+    position: relative;
+    width:100%;
+    height:680px;
+    display: flex;
+	/*
+	* set this display to block for mobile
+	* to change layout to vertical list
+	*/
+	align-items: center;
+}
+.hero-banner .hero-content{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    width:60%;
+    margin:0 auto;
+    color:#fff;
+    text-align: center;
+}
+.hero-banner .hero-content h1 { 
+    margin:0;
+    font-weight:100;
+}
+.hero-banner .hero-content p{
+    width:50%;
+    margin:32px 0;
+}
+
+.hero-banner .hero-content .cta-button-group{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+}
+
+
+.hero-banner .hero-content .cta-button-group .cta-button{
+    padding:36px;
+    margin:0 2rem;
+    font-size:1.5rem;
+    font-weight:100;
+    border:1px solid #fff;
+    color: #fff;
+    background:transparent;
+    text-decoration: none;
+}
+.hero-banner .hero-content .cta-button-group .cta-button:hover{
+    border: 1px solid #f69322;
+    color:#f69322;
+    cursor: pointer;
+}
+.hero-banner .hero-content .cta-button-group .cta-button.is-active{
+    border: 1px solid #f69322;
+    color:#f69322;
+    cursor: pointer;
+}
+.hero-banner.home-page{
+    background-image: url(/img/header-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.hero .hero-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 680px;
+    background-color: rgba(0,46,76,0.1);
+    z-index: 10;
+}
+
+@media screen and (max-width: 860px){
+    .hero-banner .hero-content p{
+        width:80%;
+        margin:1rem 0;
+    }
+    .hero-banner .hero-content .cta-button-group{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    } 
+    .hero-banner .hero-content .cta-button-group .cta-button{
+        margin:1rem;
+        width:100%;
+    }
+}
